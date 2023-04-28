@@ -1,0 +1,18 @@
+
+form {
+    border: solid 2px lightskyblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form:focus-within {
+    border-color: blue;
+}
+
+tr:hover {
+    background-color: #82d4e7;
+}
+
+body {
+    background-image: url('https://previews.123rf.com/images/tribalium123/tribalium1231304/tribalium123130400073/19316508-decorative-fish-background-background-with-fish-fish-seamless-background-fish-seamless-pattern.jpg');
+}

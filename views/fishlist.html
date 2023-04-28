@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquarium Tracker</title>
+
+    <!-- materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="/stylesheets/assignmentsStyle.css">
+
+</head>
+
+<body class="light-blue lighten-4">
+
+    <!-- nav bar -->
+    <nav class="blue darken-4">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo"><i class="material-icons left">done</i>Aquarium Tracker</a>
+            <ul class="right">
+                <li><a href="/"><i class="material-icons left">home</i> Home</a></li>
+                <li><a href="/fishlist"><i class="material-icons left">list</i> Fish List</a></li>
+                <li><a href="/purchase"><i class="material-icons left">attach_money</i> Purchase</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- page content -->
+    <div class="container">
+        <!-- Table with Fish info -->
+        <div class="section" id="list">
+            <h1>Your Fish:</h1>
+            <table class="blue lighten-5">
+                <thead>
+                    <tr>
+                        <th>Species Name</th>
+                        <th>Amount</th>
+                        <th>Color</th>
+                        <th>Awesomeness Rating</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiger Shark</td>
+                        <td>10</td>
+                        <td>Blue</td>
+                        <td>100000</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light" href="/fishlist/detail">
+                                <i class="material-icons right">edit</i>
+                                Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light red">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Jellyfish</td>
+                        <td>12</td>
+                        <td>Translucent</td>
+                        <td>9</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light" href="/fishlist/detail">
+                                <i class="material-icons right">edit</i>
+                                Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light red">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Plankton</td>
+                        <td>100</td>
+                        <td>Gray</td>
+                        <td>5</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light" href="detail.html">
+                                <i class="material-icons right">edit</i>
+                                Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light red">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- input a new fish to the tracker -->
+        <div class="section" id="add">
+            <h2>Add a fish:</h2>
+            <form class="blue lighten-5" id="addForm">
+                <div class="row">
+                    <div class="input-field col s8">
+                        <input type="text" id="nameInput" name="name" class="validate" data-length="45" required>
+                        <label for="nameInput">Species name:</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input type="number" id="amountInput" name="amount" class="validate" min=1 max=1000 value=5>
+                        <label for="amountInput">Amount:</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <select type="number" id="subjectInput" name="subject" id="subjectInput">
+                            <option value="" disabled selected>What color</option>
+                            <option value=1>Blue</option>
+                            <option value=2>Translucent</option>
+                            <option value=3>Gray</option>
+                            <option value=4>Green</option>
+                            <option value=4>Pink</option>
+                            <option value=4>Red</option>
+                          </select>
+                          <label for="subjectInput">Subject:</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input type="number" id="AwesomenessInput" name="awesomenesss" class="validate" min=1 max=10 value=5>
+                        <label for="AwesomenessInput">Awesomeness (out of 10):</label>
+                    </div>
+
+                </div>
+                <button class="btn waves-effect waves-light" type="submit">
+                    <i class="material-icons right">send</i>
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    
+    <script src="/scripts/materializeAutoInit.js"></script>
+
+</body>
+
+</html>

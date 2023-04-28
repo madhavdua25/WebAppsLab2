@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquarium Tracker</title>
+
+    <!-- materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="/stylesheets/assignmentsStyle.css">
+</head>
+
+<body class="light-blue lighten-4">
+
+    <!-- nav bar -->
+    <nav class="blue darken-4">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo"><i class="material-icons left">done</i>Aquarium Tracker</a>
+            <ul class="right">
+                <li><a href="/"><i class="material-icons left">home</i> Home</a></li>
+                <li><a href="/fishlist"><i class="material-icons left">list</i> Fish List</a></li>
+                <li><a href="/purchase"><i class="material-icons left">attach_money</i> Purchase</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- page contents -->
+    <div class="container">
+        <div class="section flow-text" id="details">
+            <h1>Tiger Shark</h1>
+            <table class="blue lighten-5">
+                <tr>
+                    <th>Amount:</th>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th>Color:</th>
+                    <td>Blue</td>
+                </tr>
+                <tr>
+                    <th>Awesomeness Rating:</th>
+                    <td>100000</td>
+                </tr>
+                <tr>
+                    <th>Shocking Anecdote:</th>
+                    <td>
+                        Our aquarium obtained these tiger sharks on a dangerous underwater expedition!
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="controls">
+            <a class="btn-large waves-effect waves-light orange left modal-trigger" href="#edit">
+                <i class="material-icons right">edit</i>
+                Edit
+            </a>
+            <a class="btn-large waves-effect waves-light red right">
+                <i class="material-icons right">delete</i>
+                Delete
+            </a>
+        </div>
+
+
+        <div class="modal" id="edit">
+            <div class="modal-content">
+                <h3>Edit item:</h3>
+                <form id="updateForm">
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <input type="text" id="nameInput" name="name" class="validate" data-length="45" required>
+                            <label for="nameInput">Species name:</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input type="number" id="amountInput" name="amount" class="validate" min=1 max=1000 value=5>
+                            <label for="amountInput">Amount:</label>
+                        </div>
+    
+                        <div class="input-field col s6">
+                            <select type="number" id="subjectInput" name="subject" id="subjectInput">
+                                <option value="" disabled selected>What color</option>
+                                <option value=1>Blue</option>
+                                <option value=2>Translucent</option>
+                                <option value=3>Gray</option>
+                                <option value=4>Green</option>
+                                <option value=4>Pink</option>
+                                <option value=4>Red</option>
+                              </select>
+                            <label for="subjectInput">Subject:</label>
+                        </div>
+    
+                        <div class="input-field col s6">
+                            <input type="number" id="AwesomenessInput" name="awesomenesss" class="validate" min=1 max=10 value=5>
+                            <label for="AwesomenessInput">Awesomeness (out of 10):</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <textarea class="materialize-textarea" id="descriptionInput" name="description" data-length="150"> Some crazy story about sharks</textarea>
+                            <label for="descriptionInput">Shocking Anecdote:</label>
+                        </div>
+    
+                    </div>
+                </form>
+
+                <div class="modal-footer">
+                    <button class="btn waves-effect waves-light " type="submit" form="updateForm">
+                        <i class="material-icons right">send</i>
+                        Submit
+                    </button>
+                    <button class="modal-close waves-effect waves-green btn-flat" >Never Mind</button>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/scripts/materializeAutoInit.js"></script>
+
+</body>
+
+</html>
