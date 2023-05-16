@@ -1,1 +1,1 @@
-# WebAppsLab2: This is my second lab for my Intro to Web App Development class!
+# WebAppsLab2: I committed my most recent changes as "lab3submit" which includes all relevant files
